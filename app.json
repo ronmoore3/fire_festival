@@ -1,0 +1,12 @@
+{
+  "name": "StepBalance",
+  "displayName": "StepBalance",
+  "expo": {
+    "name": "StepBalance",
+    "slug": "StepBalance",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

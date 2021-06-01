@@ -1,0 +1,51 @@
+{
+    "vendors": [
+        { 
+            "name": "T&T BBQ",
+            "wait time": "medium",
+            "menu": [
+                {
+                    "item": "Sandwich",
+                    "price": "$7.00",
+                    "availability": "high",
+                    "color": "orange",
+                    "width": 100
+                },
+                {
+                    "item": "Half Ribs",
+                    "price": "$12.00",
+                    "availability": "high",
+                    "color": "yellow",
+                    "width": 250
+                },
+                {
+                    "item": "Wings 6 pc",
+                    "price": "$8.00",
+                    "availability": "medium",
+                    "color": "red",
+                    "width": 150
+                }
+            ]
+        },
+        { 
+            "name": "Musashi Ramen",
+            "wait time": "short",
+            "menu": [
+                {
+                    "item": "Rolls",
+                    "price": "$8.00",
+                    "availability": "high",
+                    "color": "blue",
+                    "width": 150
+                },
+                {
+                    "item": "Ramen",
+                    "price": "$5.00",
+                    "availability": "medium",
+                    "color": "green",
+                    "width": 200
+                }
+            ]
+        }
+    ]
+}

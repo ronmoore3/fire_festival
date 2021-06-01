@@ -1,0 +1,22 @@
+{
+    "events": [
+        { 
+            "name": "Virtual Speed Dating",
+            "startTime": "6:00PM",
+            "location": "Valley Water District",
+            "friendsAttending": ["red", "pink", "green"]
+        },
+        { 
+            "name": "Godzilla vs. Kong",
+            "startTime": "6:55PM",
+            "location": "Rancho Mirage",
+            "friendsAttending": ["orange", "purple", "red", "blue"]
+        },
+        { 
+            "name": "Fireside Tea Chats",
+            "startTime": "8:00PM",
+            "location": "Pinot's Palette",
+            "friendsAttending": ["yellow"]
+        }
+    ]
+}
