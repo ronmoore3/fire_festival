@@ -4,16 +4,16 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import { navigationRef } from './src/screen/nav/RootNavigation';
-import HomeScreen, {VendorPage} from './src/screen/home';
-import ShopScreen from './src/screen/shop';
+import FoodScreen, {VendorPage} from './src/screen/food';
+import EventsScreen from './src/screen/events';
 import NavBar from './src/screen/nav';
 
 const Stack = createStackNavigator();
 
-function Badges() {
+function News() {
   return (
     <View style={styles.container}>
-      <Text>Badges</Text>
+      <Text>News</Text>
     </View>
   );
 }
@@ -38,9 +38,9 @@ export default function App() {
   return (
     <NavigationContainer ref={navigationRef}>
       <Stack.Navigator screenOptions={{headerShown: false, animationEnabled: false}} initialRouteName='Home'>
-        <Stack.Screen name='Food' component={HomeScreen} />
-        <Stack.Screen name='Shop' component={ShopScreen} />
-        <Stack.Screen name='Badges' component={Badges} />
+        <Stack.Screen name='Food' component={FoodScreen} />
+        <Stack.Screen name='Events' component={EventsScreen} />
+        <Stack.Screen name='News' component={News} />
         <Stack.Screen name='Stats' component={Stats} />
         <Stack.Screen name='Profile' component={Profile} />
         <Stack.Screen name='Vendor' component={VendorPage} />
