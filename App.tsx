@@ -6,6 +6,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { navigationRef } from './src/screen/nav/RootNavigation';
 import FoodScreen, {VendorPage} from './src/screen/food';
 import EventsScreen from './src/screen/events';
+import ProfileScreen from './src/screen/profile';
 import NavBar from './src/screen/nav';
 
 const Stack = createStackNavigator();
@@ -42,7 +43,7 @@ export default function App() {
         <Stack.Screen name='Events' component={EventsScreen} />
         <Stack.Screen name='News' component={News} />
         <Stack.Screen name='Stats' component={Stats} />
-        <Stack.Screen name='Profile' component={Profile} />
+        <Stack.Screen name='Profile' component={ProfileScreen} />
         <Stack.Screen name='Vendor' component={VendorPage} />
       </Stack.Navigator>
       <NavBar />
