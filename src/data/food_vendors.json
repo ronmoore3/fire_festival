@@ -1,7 +1,7 @@
 {
     "vendors": [
         { 
-            "name": "T&T BBQ",
+            "name": "Yum BBQ",
             "wait time": "medium",
             "menu": [
                 {
@@ -28,7 +28,7 @@
             ]
         },
         { 
-            "name": "Musashi Ramen",
+            "name": "Rush Ramen",
             "wait time": "short",
             "menu": [
                 {
@@ -48,7 +48,7 @@
             ]
         },
         { 
-            "name": "Spicy Pie Pizza",
+            "name": "Pizza You",
             "wait time": "medium",
             "menu": [
                 {
