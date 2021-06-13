@@ -52,7 +52,7 @@ export default function() {
     <View style={styles.container}>
 
       <View style={{flexDirection: 'row'}}>
-        <Ionicons name="calendar-outline" size={36} color={"#fff"} />
+        <Ionicons name="person-outline" size={36} color={"#fff"} />
         <Text style={{flex: 1, fontFamily: 'Helvetica', fontSize: 36, fontWeight: 'bold', color: '#fff'}}>&nbsp;Profile</Text>
       </View>
 
