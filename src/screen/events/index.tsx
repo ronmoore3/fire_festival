@@ -3,6 +3,15 @@ import { Text, StyleSheet, View, Image, TouchableOpacity, FlatList } from 'react
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import data from '../../data/events.json';
 
+const images = {
+  iroh: require('../../../static/friend_iroh.jpg'),
+  sokka: require('../../../static/friend_sokka.jpg'),
+  cabbage: require('../../../static/friend_cabbage.png'),
+  azula: require('../../../static/friend_azula.png'),
+  toph: require('../../../static/friend_toph.png'),
+  tylee: require('../../../static/friend_tylee.jpg'),
+};
+
 export default function() {
   const [selected, setSelected] = useState('null');
 
@@ -47,7 +56,12 @@ export default function() {
   );
 
   const _renderFriendItem = ({item}:any) => (
-    <View style={{backgroundColor: item, height: 50, width: 50, borderRadius: 25, marginHorizontal: 5}}></View>
+    <View style={{backgroundColor: item, height: 50, width: 50, borderRadius: 25, marginHorizontal: 5}}>
+      <Image 
+        style={{backgroundColor: item, height: 50, width: 50, borderRadius: 25, marginHorizontal: 5}} 
+        source={images[item]}
+      />
+    </View>
   )
 
   return (

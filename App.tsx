@@ -9,6 +9,9 @@ import EventsScreen from './src/screen/events';
 import ProfileScreen from './src/screen/profile';
 import NavBar from './src/screen/nav';
 import NewsScreen from './src/screen/news';
+import Map from './src/screen/map';
+
+import News from './src/screen/map';
 
 const Stack = createStackNavigator();
 
@@ -34,7 +37,7 @@ export default function App() {
       <Stack.Navigator screenOptions={{headerShown: false, animationEnabled: false}} initialRouteName='Home'>
         <Stack.Screen name='Food' component={FoodScreen} />
         <Stack.Screen name='Events' component={EventsScreen} />
-        <Stack.Screen name='Home' component={Home} />
+        <Stack.Screen name='Home' component={Map} />
         <Stack.Screen name='News' component={NewsScreen} />
         <Stack.Screen name='Profile' component={ProfileScreen} />
         <Stack.Screen name='Vendor' component={VendorPage} />

@@ -46,6 +46,33 @@
                     "width": 200
                 }
             ]
-        }
+        },
+        { 
+            "name": "Spicy Pie Pizza",
+            "wait time": "medium",
+            "menu": [
+                {
+                    "item": "Sandwich",
+                    "price": "$7.00",
+                    "availability": "high",
+                    "color": "orange",
+                    "width": 100
+                },
+                {
+                    "item": "Half Ribs",
+                    "price": "$12.00",
+                    "availability": "high",
+                    "color": "yellow",
+                    "width": 250
+                },
+                {
+                    "item": "Wings 6 pc",
+                    "price": "$8.00",
+                    "availability": "medium",
+                    "color": "red",
+                    "width": 150
+                }
+            ]
+        },
     ]
 }

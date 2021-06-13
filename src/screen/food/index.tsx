@@ -2,7 +2,15 @@ import React from 'react';
 import { Text, StyleSheet, View, Image, TouchableOpacity, FlatList } from 'react-native';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
 import * as RootNavigation from '../nav/RootNavigation';
-import data from '../../data/food_vendors.json'
+import data from '../../data/food_vendors.json';
+
+const images = {
+  Sandwich: require('../../../static/food_bbq1.jpg'),
+  'Half Ribs': require('../../../static/food_bbq2.jpg'),
+  'Wings 6 pc': require('../../../static/food_bbq3.jpg'),
+  'Rolls': require('../../../static/food_ramen1.jpg'),
+  'Ramen': require('../../../static/food_ramen2.jpg'),
+};
 
 export function VendorPage(props:any) {
   const item = props.route.params.item;
@@ -86,9 +94,13 @@ export default function() {
     </View>
   )};
 
-  const _renderMenuItem = ({item}: any) => (
-    <View style={{height:150, width:item.width, marginRight: 5, backgroundColor: item.color}} />
-  );
+  const _renderMenuItem = ({item}: any) => {
+    console.log(item.picture)
+    return (
+    <View style={{height:150, width:item.width, marginRight: 5, backgroundColor: item.color}}>
+      <Image style={{flex:1,width:'100%'}} source={images[item.item]} />
+    </View>
+  )};
   
   return (
     <View style={styles.container}>
