@@ -1,26 +1,26 @@
 import React, { useState } from 'react';
 import { Text, StyleSheet, View, Image, TouchableOpacity, FlatList } from 'react-native';
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons';
-import data from '../../data/events.json';
+import data from '../../data/news.json';
 
 export default function() {
   const [selected, setSelected] = useState('null');
 
-  const _select = (event:string) => {
-    setSelected(selected == event ? 'null' : event);
+  const _select = (news:string) => {
+    setSelected(selected == news ? 'null' : news);
   }
 
-  const _renderEventItem = ({item}: any) => (
+  const _renderNewsItem = ({item}: any) => (
     <View style={{marginVertical: 5}}>
       <TouchableOpacity style={styles.category} activeOpacity={1} onPress={() => _select(item.name)}>
         <View style={{flexDirection: 'row', paddingVertical: 10, paddingHorizontal: 20,}}>
           <View style={styles.text}>
-            <Text style={{fontSize: 20, fontWeight: 'bold'}}>{item.name}</Text>
-            <Text>{item.startTime}</Text>
-            <Text>{item.location}</Text>
+            <Text style={{fontSize: 20, fontWeight: 'bold'}}>{item.title}</Text>
+            <Text>{item.time}</Text>
+            <Text>{item.lowerTitle}</Text>
           </View>
           <TouchableOpacity style={{flex: 1, backgroundColor:'#3399FF', flexDirection:'row', justifyContent:'center', alignItems:'center', padding:5, borderRadius: 5, overflow: 'hidden'}}>
-            <Text style={{fontFamily: 'Helvetica', fontSize: 16, color: 'white'}}>RSVP</Text>
+            <Text style={{fontFamily: 'Helvetica', fontSize: 16, color: 'white'}}>Info</Text>
           </TouchableOpacity>
         </View>
       </TouchableOpacity>
@@ -29,11 +29,11 @@ export default function() {
         (
           <View style={{flexDirection: 'row', backgroundColor: '#000', justifyContent: 'center'}}>
             <View style={{backgroundColor:'#3a3a3a', width:'95%', paddingVertical: 10, paddingHorizontal: 10}}>
-              <Text style={{color: '#fff'}}>Friends Attending</Text>
+
               <View style={{flexDirection: 'row', marginTop: 5}}>
-                <FlatList 
+              <FlatList 
                   data={item.friendsAttending}
-                  renderItem={_renderFriendItem}
+                  renderItem={_renderInfoItem}
                   horizontal={true}
                   keyExtractor={item => item.name}
                 />
@@ -46,7 +46,7 @@ export default function() {
     </View>
   );
 
-  const _renderFriendItem = ({item}:any) => (
+  const _renderInfoItem = ({item}:any) => (
     <View style={{backgroundColor: item, height: 50, width: 50, borderRadius: 25, marginHorizontal: 5}}></View>
   )
 
@@ -57,9 +57,9 @@ export default function() {
         <Text style={{flex: 1, fontFamily: 'Helvetica', fontSize: 36, fontWeight: 'bold', color: '#fff'}}>&nbsp;News</Text>
       </View>
       <FlatList 
-        data={data.events}
-        renderItem={_renderEventItem}
-        keyExtractor={item => item.name}
+        data={data.news}
+        renderItem={_renderNewsItem}
+        keyExtractor={item => item.title}
       />
     </View>
   )
@@ -73,8 +73,14 @@ const styles = StyleSheet.create({
     paddingBottom: 75,
     paddingHorizontal: 25
   },
+  subCategory: {
+    backgroundColor: '#FEE3DC',
+    alignSelf: 'stretch',
+    // alignItems: 'center',
+    justifyContent: 'center',
+  },
   category: {
-    backgroundColor: '#7dddfb',
+    backgroundColor: '#2CD1FD',
     alignSelf: 'stretch',
     // alignItems: 'center',
     justifyContent: 'center',

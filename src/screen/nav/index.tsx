@@ -8,8 +8,8 @@ export default function() {
 
   const FOOD = 'Food';
   const EVENTS = 'Events';
+  const HOME = 'Home';
   const NEWS = 'News';
-  const STATS = 'Stats';
   const PROFILE = 'Profile';
   
   const [selected, setSelected] = useState('Food');
@@ -27,11 +27,11 @@ export default function() {
       <TouchableOpacity onPress={() => _navigate(EVENTS)} style={{flex:1, margin:5, alignItems: 'center'}}>
         <Ionicons name="calendar-outline" size={32} color={EVENTS === selected ? "#ffa500" : 'grey'} />
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => _navigate(NEWS)} style={{flex:1, margin:5, alignItems: 'center'}}>
-        <Ionicons name="bonfire-outline" size={32} color={NEWS === selected ? "#ffa500" : 'grey'} />
+      <TouchableOpacity onPress={() => _navigate(HOME)} style={{flex:1, margin:5, alignItems: 'center'}}>
+        <Ionicons name="bonfire-outline" size={32} color={HOME === selected ? "#ffa500" : 'grey'} />
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => _navigate(STATS)} style={{flex:1, margin:5, alignItems: 'center'}}>
-        <Ionicons name="newspaper-outline" size={32} color={STATS === selected ? "#ffa500" : 'grey'} />
+      <TouchableOpacity onPress={() => _navigate(NEWS)} style={{flex:1, margin:5, alignItems: 'center'}}>
+        <Ionicons name="newspaper-outline" size={32} color={NEWS === selected ? "#ffa500" : 'grey'} />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => _navigate(PROFILE)} style={{flex:1, margin:5, alignItems: 'center'}}>
         <Ionicons name="person-outline" size={32} color={PROFILE === selected ? "#ffa500" : 'grey'} />

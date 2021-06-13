@@ -8,21 +8,14 @@ import FoodScreen, {VendorPage} from './src/screen/food';
 import EventsScreen from './src/screen/events';
 import ProfileScreen from './src/screen/profile';
 import NavBar from './src/screen/nav';
+import NewsScreen from './src/screen/news';
 
 const Stack = createStackNavigator();
 
-function News() {
+function Home() {
   return (
     <View style={styles.container}>
-      <Text>News</Text>
-    </View>
-  );
-}
-
-function Stats() {
-  return (
-    <View style={styles.container}>
-      <Text>Stats</Text>
+      <Text>Home</Text>
     </View>
   );
 }
@@ -41,8 +34,8 @@ export default function App() {
       <Stack.Navigator screenOptions={{headerShown: false, animationEnabled: false}} initialRouteName='Home'>
         <Stack.Screen name='Food' component={FoodScreen} />
         <Stack.Screen name='Events' component={EventsScreen} />
-        <Stack.Screen name='News' component={News} />
-        <Stack.Screen name='Stats' component={Stats} />
+        <Stack.Screen name='Home' component={Home} />
+        <Stack.Screen name='News' component={NewsScreen} />
         <Stack.Screen name='Profile' component={ProfileScreen} />
         <Stack.Screen name='Vendor' component={VendorPage} />
       </Stack.Navigator>

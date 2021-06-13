@@ -1,0 +1,19 @@
+{
+    "news": [
+        { 
+            "title": "50/50 Raffle",
+            "time": "16 June 3:30pm",
+            "lowerTitle": "Deadline 17 June 5:00pm"
+        },
+        { 
+            "title": "Rod Ocean Delayed",
+            "time": "16 June 12:00pm",
+            "lowerTitle": "Starts 8:30pm"
+        },
+        { 
+            "title": "Medical Clinic Now Open",
+            "time": "16 June 9:00am",
+            "lowerTitle": "NorthEast Tent"
+        }
+    ]
+}
