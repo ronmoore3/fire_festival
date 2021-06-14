@@ -11,19 +11,24 @@ export default function() {
   }
 
   const _renderNewsItem = ({item}: any) => (
-    <View style={{marginVertical: 5}}>
-      <TouchableOpacity style={styles.category} activeOpacity={1} onPress={() => _select(item.name)}>
-        <View style={{flexDirection: 'row', paddingVertical: 10, paddingHorizontal: 20,}}>
-          <View style={styles.text}>
-            <Text style={{fontSize: 20, fontWeight: 'bold'}}>{item.title}</Text>
-            <Text>{item.time}</Text>
-            <Text>{item.lowerTitle}</Text>
+    <View style={{marginVertical: 10}}>
+      <View style={styles.category}>
+        <Text style={{padding: 5, fontSize: 20, fontWeight: 'bold', backgroundColor: 'blue', color: 'white', borderRadius: 15, overflow: 'hidden'}}>{item.title}</Text>
+        <View style={styles.text}>
+          
+          <Text>{item.time}</Text>
+          <Text>{item.lowerTitle}</Text>
+          <View style={{justifyContent: 'flex-end', flexDirection: 'row'}}>
+            <TouchableOpacity>
+              <MaterialCommunityIcons name="message-text-outline" size={24} color="black" />
+            </TouchableOpacity>
+            <Text>&nbsp;</Text>
+            <TouchableOpacity>
+              <MaterialCommunityIcons name="heart-outline" size={24} color="black" />
+            </TouchableOpacity> 
           </View>
-          <TouchableOpacity style={{flex: 1, backgroundColor:'#3399FF', flexDirection:'row', justifyContent:'center', alignItems:'center', padding:5, borderRadius: 5, overflow: 'hidden'}}>
-            <Text style={{fontFamily: 'Helvetica', fontSize: 16, color: 'white'}}>Info</Text>
-          </TouchableOpacity>
         </View>
-      </TouchableOpacity>
+      </View>
       { 
         selected === item.name ? 
         (
@@ -52,9 +57,9 @@ export default function() {
 
   return (
     <View style={styles.container}>
-      <View style={{flexDirection: 'row'}}>
+      <View style={{flexDirection: 'row', marginBottom: 10}}>
         <Ionicons name="newspaper-outline" size={36} color={"#fff"} />
-        <Text style={{flex: 1, fontFamily: 'Helvetica', fontSize: 36, fontWeight: 'bold', color: '#fff'}}>&nbsp;News</Text>
+        <Text style={{flex: 1, fontFamily: 'Helvetica', fontSize: 36, fontWeight: 'bold', color: '#fff'}}>&nbsp;Bulletin Board</Text>
       </View>
       <FlatList 
         data={data.news}
@@ -80,14 +85,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   category: {
-    backgroundColor: '#2CD1FD',
+    backgroundColor: '#fff',
     alignSelf: 'stretch',
     // alignItems: 'center',
     justifyContent: 'center',
+    borderRadius: 20
   },
   text: {
     flex:4,
     color: '#000',
+    padding: 5
   },
   subtext: {
     fontSize: 12

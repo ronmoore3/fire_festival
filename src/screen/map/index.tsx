@@ -29,13 +29,13 @@ export default function() {
         <Text style={{flex: 1, fontFamily: 'Helvetica', fontSize: 36, fontWeight: 'bold', color: '#fff'}}>&nbsp;Festival Map</Text>
       </View>
       <View style={{flex:1, flexDirection: 'row'}}>
-        <TouchableOpacity 
+        <TouchableOpacity activeOpacity={1} 
           style={{flex: 1, backgroundColor: 'blue'}}
           onPress={() => _select('jennie')}
         >
           <Image style={{flex:1, width: '100%'}} source={images.tl} />
         </TouchableOpacity>
-        <TouchableOpacity 
+        <TouchableOpacity activeOpacity={1} 
           style={{flex: 1, backgroundColor: 'blue'}}
           onPress={() => _select('ari')}
         >
@@ -48,7 +48,7 @@ export default function() {
         >
           <Image style={{flex:1, width: '100%'}} source={images.bl} />
         </View>
-        <TouchableOpacity 
+        <TouchableOpacity activeOpacity={1} 
           style={{flex: 1, backgroundColor: 'blue'}}
           onPress={() => _select('billie')}
         >
