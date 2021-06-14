@@ -12,6 +12,7 @@ import NewsScreen from './src/screen/news';
 import Map from './src/screen/map';
 
 import News from './src/screen/map';
+import Festivals from './src/screen/festivals';
 
 const Stack = createStackNavigator();
 
@@ -34,7 +35,8 @@ function Profile() {
 export default function App() {
   return (
     <NavigationContainer ref={navigationRef}>
-      <Stack.Navigator screenOptions={{headerShown: false, animationEnabled: false}} initialRouteName='Home'>
+      <Stack.Navigator screenOptions={{headerShown: false, animationEnabled: false}} initialRouteName='Festivals'>
+        <Stack.Screen name='Festivals' component={Festivals} />
         <Stack.Screen name='Food' component={FoodScreen} />
         <Stack.Screen name='Events' component={EventsScreen} />
         <Stack.Screen name='Home' component={Map} />

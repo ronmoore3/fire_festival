@@ -12,7 +12,7 @@ export default function() {
   const NEWS = 'News';
   const PROFILE = 'Profile';
   
-  const [selected, setSelected] = useState('Food');
+  const [selected, setSelected] = useState('Festivals');
 
   const _navigate = (screen:string) => {
     setSelected(screen);
@@ -20,7 +20,10 @@ export default function() {
   }
 
   return (
-    <View style={styles.container}>
+    <View>
+      {/* {(selected !== 'Festivals') ? 
+      ( */}
+      <View style={styles.container}>
       <TouchableOpacity onPress={() => _navigate(FOOD)} style={{flex:1, margin:5, alignItems: 'center'}}>
         <Ionicons name="fast-food-outline" size={32} color={FOOD === selected ? "#ffa500" : 'grey'} />
       </TouchableOpacity>
@@ -37,6 +40,10 @@ export default function() {
         <Ionicons name="person-outline" size={32} color={PROFILE === selected ? "#ffa500" : 'grey'} />
       </TouchableOpacity>
       <View style={styles.blankspace}></View>
+      </View>
+      {/* ) :
+      null
+      } */}
     </View>
   );
 }
