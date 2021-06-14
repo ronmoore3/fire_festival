@@ -8,7 +8,15 @@ import * as RootNavigation from '../nav/RootNavigation';
 
 
 const images = {
-  ff: require('../../../static/class.jpg')
+  ff1: require('../../../static/fest1.jpg'),
+  ff2: require('../../../static/fest2.jpg'),
+  ff3: require('../../../static/fest3.jpg'),
+  ff4: require('../../../static/fest4.jpg'),
+  ff5: require('../../../static/fest5.jpg'),
+  ff6: require('../../../static/fest6.jpg'),
+  ff7: require('../../../static/fest7.jpg'),
+  ff8: require('../../../static/fest8.jpg'),
+  ff9: require('../../../static/fest9.jpg')
 };
 
 function FestivalBox(props:any) {
@@ -46,24 +54,24 @@ export default function() {
         Your Upcoming Festivals
       </Text>
       <View style={{flexDirection: 'row'}}>
-        <FestivalBox festivalName={'Fire Festival'} pic={'ff'}/>
-        <FestivalBox festivalName={'Water Festival'} pic={'ff'}/>
+        <FestivalBox festivalName={'Fire Festival'} pic={'ff1'}/>
+        <FestivalBox festivalName={'Event Full of Fun'} pic={'ff2'}/>
       </View>
 
       <Text style={{color:'white', fontSize:16, marginTop: 10}}>
         Top Festivals
       </Text>
       <View style={{flexDirection: 'row'}}>
-        <FestivalBox festivalName={'Fire Festival'} pic={'ff'}/>
-        <FestivalBox festivalName={'Water Festival'} pic={'ff'}/>
+        <FestivalBox festivalName={'Summer Festival'} pic={'ff3'}/>
+        <FestivalBox festivalName={'Art For All'} pic={'ff4'}/>
       </View>
       <View style={{flexDirection: 'row'}}>
-        <FestivalBox festivalName={'Fire Festival'} pic={'ff'}/>
-        <FestivalBox festivalName={'Water Festival'} pic={'ff'}/>
+        <FestivalBox festivalName={'Open Lantern Fest'} pic={'ff5'}/>
+        <FestivalBox festivalName={'Technology and Arts Fest'} pic={'ff6'}/>
       </View>
       <View style={{flexDirection: 'row'}}>
-        <FestivalBox festivalName={'Fire Festival'} pic={'ff'}/>
-        <FestivalBox festivalName={'Water Festival'} pic={'ff'}/>
+        <FestivalBox festivalName={'Craft Smoothie Centers'} pic={'ff7'}/>
+        <FestivalBox festivalName={'Acapella Events'} pic={'ff8'}/>
       </View>
     </View>
   )
