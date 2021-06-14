@@ -10,6 +10,9 @@ const images = {
   'Wings 6 pc': require('../../../static/food_bbq3.jpg'),
   'Rolls': require('../../../static/food_ramen1.jpg'),
   'Ramen': require('../../../static/food_ramen2.jpg'),
+  'Cheese Pizza': require('../../../static/food_pizza1.jpg'),
+  'Specialty Pizza': require('../../../static/food_pizza2.jpg'),
+  'Cheese Fries': require('../../../static/food_pizza3.jpg')
 };
 
 export function VendorPage(props:any) {

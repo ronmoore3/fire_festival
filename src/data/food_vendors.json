@@ -52,21 +52,21 @@
             "wait time": "medium",
             "menu": [
                 {
-                    "item": "Sandwich",
+                    "item": "Cheese Pizza",
                     "price": "$7.00",
                     "availability": "high",
                     "color": "orange",
                     "width": 100
                 },
                 {
-                    "item": "Half Ribs",
+                    "item": "Specialty Pizza",
                     "price": "$12.00",
                     "availability": "high",
                     "color": "yellow",
                     "width": 250
                 },
                 {
-                    "item": "Wings 6 pc",
+                    "item": "Cheese Fries",
                     "price": "$8.00",
                     "availability": "medium",
                     "color": "red",

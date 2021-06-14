@@ -28,7 +28,7 @@ export default function() {
         <Ionicons name="calendar-outline" size={32} color={EVENTS === selected ? "#ffa500" : 'grey'} />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => _navigate(HOME)} style={{flex:1, margin:5, alignItems: 'center'}}>
-        <Ionicons name="bonfire-outline" size={32} color={HOME === selected ? "#ffa500" : 'grey'} />
+        <Ionicons name="map" size={32} color={HOME === selected ? "#ffa500" : 'grey'} />
       </TouchableOpacity>
       <TouchableOpacity onPress={() => _navigate(NEWS)} style={{flex:1, margin:5, alignItems: 'center'}}>
         <Ionicons name="newspaper-outline" size={32} color={NEWS === selected ? "#ffa500" : 'grey'} />

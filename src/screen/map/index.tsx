@@ -25,7 +25,7 @@ export default function() {
   return (
     <View style={{flex:1}}>
       <View style={{...styles.container, flexDirection: 'row'}}>
-        <Ionicons name="bonfire-outline" size={36} color={"#fff"} />
+        <Ionicons name="map" size={36} color={"#fff"} />
         <Text style={{flex: 1, fontFamily: 'Helvetica', fontSize: 36, fontWeight: 'bold', color: '#fff'}}>&nbsp;Festival Map</Text>
       </View>
       <View style={{flex:1, flexDirection: 'row'}}>
